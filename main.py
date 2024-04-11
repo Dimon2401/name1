@@ -119,6 +119,51 @@ import requests
 #
 # color_of_vehicle(x)
 
-class Dog()
+# class Dog():
+#
+#
+#     def __init__(self, name, origin):
+#         self.name = name
+#         self.origin = origin
+#     def say(self):
+#         print(f"{self.name} умеет лаять")
+#
+# white_dog = Dog("Шарик", "Asian")
+# brown_dog = Dog("Пушок", "Еврей")
+#
+#
+#
+# print(white_dog.name)
+# print(brown_dog.name)
+# print(f"{white_dog.name} порода {white_dog.origin}")
+#
+# white_dog.say()
+
+class Human:
+
+    def __init__(self):
+        # self.fio = fio
+        # self.birthday = birthday
+        # self.number = number
+        # self.city = city
+        # self.country = country
+        # self.home_adress = home_adress
+        pass
+    def input_fio(self, fio):
+        self.fio = fio
+    def print_fio(self):
+        print(self.fio)
+    def get_fio(self):
+        return self.fio
+
+person_1 = Human()
+person_1.input_fio(input('Введите имя: '))
+person_1.print_fio()
+person_1.get_fio()
+
+
+
+
+
 
 

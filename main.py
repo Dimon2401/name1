@@ -64,58 +64,61 @@ import requests
 #         new_dog_firstLetter_C.append(responce_2.json()[i]["name"])
 # print(new_dog_firstLetter_C)
 
-import json
-import io
-from collections import Counter
-def driving_expirience(name_bd):
-    dr_ex_list = []
-    try:
-        with io.open(name_bd,encoding='utf-8') as read_file:
-            data=json.load(read_file)
-            for i in range(len(data['features'])):
-                if len(data['features'][i]['properties']['vehicles']) >= 2:
-                    for j in range(len(data['features'][i]['properties']['vehicles'])):
-                        if len(data['features'][i]['properties']['vehicles'][j]['participants']) >= 2:
-                            for k in range(len(data['features'][i]['properties']['vehicles']['participants'])):
-                                dr_ex_list.append(data['features'][i]['properties']['vehicles'][j]['participants'][k]['years_of_driving_experience'])
-                    else:
-                        dr_ex_list.append(data['features'][i]['properties']['vehicles'][j]['participants'][0]['years_of_driving_experience'])
-                else:
-                    dr_ex_list.append(data['features'][i]['properties']['vehicles'][0]['participants'][0]['years_of_driving_experience'])
+# import json
+# import io
+# from collections import Counter
+# def driving_expirience(name_bd):
+#     dr_ex_list = []
+#     try:
+#         with io.open(name_bd,encoding='utf-8') as read_file:
+#             data=json.load(read_file)
+#             for i in range(len(data['features'])):
+#                 if len(data['features'][i]['properties']['vehicles']) >= 2:
+#                     for j in range(len(data['features'][i]['properties']['vehicles'])):
+#                         if len(data['features'][i]['properties']['vehicles'][j]['participants']) >= 2:
+#                             for k in range(len(data['features'][i]['properties']['vehicles']['participants'])):
+#                                 dr_ex_list.append(data['features'][i]['properties']['vehicles'][j]['participants'][k]['years_of_driving_experience'])
+#                     else:
+#                         dr_ex_list.append(data['features'][i]['properties']['vehicles'][j]['participants'][0]['years_of_driving_experience'])
+#                 else:
+#                     dr_ex_list.append(data['features'][i]['properties']['vehicles'][0]['participants'][0]['years_of_driving_experience'])
+#
+#     except Exception as ex:
+#          print(ex)
+#
+#     finally:
+#         counter = Counter(dr_ex_list)
+#         print(counter)
+# x='smolenskaia-oblast.json'
+# driving_expirience(x)
+#
+# def color_of_vehicle(name_bd):
+#     dr_ex_list2 = []
+#     try:
+#
+#         with io.open(name_bd, encoding='utf-8') as read_file:
+#             # получаем весь файл в рид файл
+#             # форматируем файл в json и присваиваем его переменной data
+#             data = json.load(read_file)
+#     #         с помощью цикла проходимся по файлу
+#             for i in range(len(data['features'])):
+#                 if len(data['features'][i]['properties']['vehicles']) >= 2:
+#                     for j in range(len(data['features'][i]['properties']['vehicles'])):
+#                         dr_ex_list2.append(data['features'][i]['properties']['vehicles'][j]['color'])
+#                 elif len(data['features'][i]['properties']['vehicles']) ==0:
+#                     dr_ex_list2.append('нет ТС')
+#
+#                 else:
+#                     dr_ex_list2.append(data['features'][i]['properties']['vehicles'][0]['color'])
+#     except Exception as ex:
+#         print(ex)
+#
+#     finally:
+#         counter = Counter(dr_ex_list2)
+#         print(counter)
+#
+# color_of_vehicle(x)
 
-    except Exception as ex:
-         print(ex)
+class Dog()
 
-    finally:
-        counter = Counter(dr_ex_list)
-        print(counter)
-x='smolenskaia-oblast.json'
-driving_expirience(x)
-
-def color_of_vehicle(name_bd):
-    dr_ex_list2 = []
-    try:
-
-        with io.open(name_bd, encoding='utf-8') as read_file:
-            # получаем весь файл в рид файл
-            # форматируем файл в json и присваиваем его переменной data
-            data = json.load(read_file)
-    #         с помощью цикла проходимся по файлу
-            for i in range(len(data['features'])):
-                if len(data['features'][i]['properties']['vehicles']) >= 2:
-                    for j in range(len(data['features'][i]['properties']['vehicles'])):
-                        dr_ex_list2.append(data['features'][i]['properties']['vehicles'][j]['color'])
-                elif len(data['features'][i]['properties']['vehicles']) ==0:
-                    dr_ex_list2.append('нет ТС')
-
-                else:
-                    dr_ex_list2.append(data['features'][i]['properties']['vehicles'][0]['color'])
-    except Exception as ex:
-        print(ex)
-
-    finally:
-        counter = Counter(dr_ex_list2)
-        print(counter)
-
-color_of_vehicle(x)
 

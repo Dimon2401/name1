@@ -139,27 +139,7 @@ import requests
 #
 # white_dog.say()
 
-class Human:
-
-    def __init__(self):
-        # self.fio = fio
-        # self.birthday = birthday
-        # self.number = number
-        # self.city = city
-        # self.country = country
-        # self.home_adress = home_adress
-        pass
-    def input_fio(self, fio):
-        self.fio = fio
-    def print_fio(self):
-        print(self.fio)
-    def get_fio(self):
-        return self.fio
-
-person_1 = Human()
-person_1.input_fio(input('Введите имя: '))
-person_1.print_fio()
-person_1.get_fio()
+c
 
 
 

@@ -139,11 +139,117 @@ import requests
 #
 # white_dog.say()
 
-c
+# class Human:
+#         def input_data(self):
+#             self.fio = input("Введите ФИО ")
+#             self.number = input("Введите Номер Телефона ")
+#             self.birthday = input("Введите Днюху")
+#
+#         def print_data(self):
+#             print(self.fio)
+#             print(self.number)
+#             print(self.birthday)
+#         def get_fio(self):
+#             return self.fio
+#         def get_number(self):
+#             return self.number
+#         def get_birthday(self):
+#             return self.birthday
+#
+# class Builder(Human):
+#
+#         def input_parametr(self):
+#             self.specialization = input("Ввкдите специализацию строителя?:")
+#             self.main_tools = input("Введите основной инструмент:")
+#             self.post = input("Введите должность:")
+#
+#         def print_data(self):
+#             print(self.fio)
+#             print(self.number)
+#             print(self.birthday)
+#             print(self.post)
+#             print(self.main_tools)
+#             print(self.specialization)
+#
+#         def get_post(self):
+#             return self.post
+#
+#         def get_main_tools(self):
+#             return self.main_tools
+#
+#         def get_specialization(self):
+#             return self.specialization
+# # object_1 = Human()
+# # object_1.input_data()
+# list.employee=[]
+# for i in range(3):
+#     employee = Builder()
+#     employee.input_data()
+#     employee.input_parametr()
+#     employee.print_data()
+
+# class City:
+#
+#         def input_data(self):
+#             self.name_city = input("Введите город: ")
+#             self.count_resident = int(input("Введите количество жителей: "))
+#             self.cod_phone = int(input("Введите тел.код города: "))
+#
+#         def print_data(self):
+#             print(self.name_city)
+#             print(self.count_resident)
+#             print(self.cod_phone)
+#
+#         def get_name_city(self):
+#             return self.name_city
+#
+#         def get_count_resident(self):
+#             return self.name_city
+#
+#         def get_cod_phone(self):
+#             return self.cod_phone
+#
+# city_1 = City()
+# city_1.input_data()
+# city_1.print_data()
+
+class Passport:
+
+    def input_data(self):
+        self.name = input("Введите Имя: ")
+        self.sname = input("Введите Фамилия: ")
+        self.faser_name = input("Введите Отчество: ")
+        self.birthday = int(input("Введите Днюху: "))
+        self.registration = input("Введите адрес: ")
+        self.number = int(input("Введите серию и номер: "))
+        self.data = int(input("Введите дату выдачи: "))
+
+    def print_data(self):
+        print(self.name)
+        print(self.sname)
+        print(self.faser_name)
+        print(self.birthday)
+        print(self.registration)
+        print(self.number)
+        print(self.data)
+class Foreign(Passport):
+
+    def input_parametr(self):
+
+        self.country = input("Введите Страну: ")
+        self.fin_data = input("Введите окончание срока действия: ")
+        self.number_1 = int(input("Введите серию и номер: "))
+        self.data_1 = int(input("Введите дату выдачи: "))
+
+    def print_data1(self):
+        print(self.country)
+        print(self.fin_data)
+        print(self.number_1)
+        print(self.data_1)
 
 
-
-
-
-
-
+object_1 = Foreign()
+object_1.input_data()
+object_1.input_parametr()
+object_1.print_data1()
+object_1.print_data()

@@ -252,4 +252,4 @@ object_1 = Foreign()
 object_1.input_data()
 object_1.input_parametr()
 object_1.print_data1()
-object_1.print_data()
+object_1.print_data()5

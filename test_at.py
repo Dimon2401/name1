@@ -1,15 +1,32 @@
 import pytest
+class Car:
 
+    def __init__(self, year_model, make, speed=0):
+        self.year_model = year_model
+        self.make = make
+        self.speed=speed
 
-def pow_2(a):
-    return a**2
+    def accelerate(self):
+        self.speed +=5
 
-def test_pow_2():
-    assert pow_2(3) == 9
+    def break_(self):
+        self.speed -=5
 
+    def get_speed(self):
+        return self.speed
 
-def test_pow_2_1():
-    assert pow_2(4)==16
+car=Car("2015", "VW Polo")
+def test_start_speed():
 
-def test_pow_2_2():
-    assert pow_2(22) == 1600
+    assert car.get_speed() ==0
+
+for i in range(5):
+    car.accelerate()
+    print(f"Текущая скорость авто {car.get_speed()}")
+for i in range(5):
+    car.break_()
+    print(f"Текущая скорость авто {car.get_speed()}")
+
+def test_get_speed():
+
+    assert car.get_speed() ==0

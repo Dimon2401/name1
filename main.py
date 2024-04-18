@@ -254,26 +254,27 @@ import requests
 # object_1.print_data1()
 # object_1.print_data()
 
-class Car:
+# class Car:
+#
+#     def __init__(self, year_model, make, speed=0):
+#         self.year_model = year_model
+#         self.make = make
+#         self.speed=speed
+#
+#     def accelerate(self):
+#         self.speed +=5
+#
+#     def break_(self):
+#         self.speed -=5
+#
+#     def get_speed(self):
+#         return self.speed
+#
+# car=Car("2015", "VW Polo")
+# for i in range(5):
+#     car.accelerate()
+#     print(f"Текущая скорость авто {car.get_speed()}")
+# for i in range(5):
+#     car.break_()
+#     print(f"Текущая скорость авто {car.get_speed()}")
 
-    def __init__(self, year_model, make, speed=0):
-        self.year_model = year_model
-        self.make = make
-        self.speed=speed
-
-    def accelerate(self):
-        self.speed +=5
-
-    def break_(self):
-        self.speed -=5
-
-    def get_speed(self):
-        return self.speed
-
-car=Car("2015", "VW Polo")
-for i in range(5):
-    car.accelerate()
-    print(f"Текущая скорость авто {car.get_speed()}")
-for i in range(5):
-    car.break_()
-    print(f"Текущая скорость авто {car.get_speed()}")

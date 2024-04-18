@@ -213,43 +213,67 @@ import requests
 # city_1.input_data()
 # city_1.print_data()
 
-class Passport:
+# class Passport:
+#
+#     def input_data(self):
+#         self.name = input("Введите Имя: ")
+#         self.sname = input("Введите Фамилия: ")
+#         self.faser_name = input("Введите Отчество: ")
+#         self.birthday = int(input("Введите Днюху: "))
+#         self.registration = input("Введите адрес: ")
+#         self.number = int(input("Введите серию и номер: "))
+#         self.data = int(input("Введите дату выдачи: "))
+#
+#     def print_data(self):
+#         print(self.name)
+#         print(self.sname)
+#         print(self.faser_name)
+#         print(self.birthday)
+#         print(self.registration)
+#         print(self.number)
+#         print(self.data)
+# class Foreign(Passport):
+#
+#     def input_parametr(self):
+#
+#         self.country = input("Введите Страну: ")
+#         self.fin_data = input("Введите окончание срока действия: ")
+#         self.number_1 = int(input("Введите серию и номер: "))
+#         self.data_1 = int(input("Введите дату выдачи: "))
+#
+#     def print_data1(self):
+#         print(self.country)
+#         print(self.fin_data)
+#         print(self.number_1)
+#         print(self.data_1)
+#
+#
+# object_1 = Foreign()
+# object_1.input_data()
+# object_1.input_parametr()
+# object_1.print_data1()
+# object_1.print_data()
 
-    def input_data(self):
-        self.name = input("Введите Имя: ")
-        self.sname = input("Введите Фамилия: ")
-        self.faser_name = input("Введите Отчество: ")
-        self.birthday = int(input("Введите Днюху: "))
-        self.registration = input("Введите адрес: ")
-        self.number = int(input("Введите серию и номер: "))
-        self.data = int(input("Введите дату выдачи: "))
+class Car:
 
-    def print_data(self):
-        print(self.name)
-        print(self.sname)
-        print(self.faser_name)
-        print(self.birthday)
-        print(self.registration)
-        print(self.number)
-        print(self.data)
-class Foreign(Passport):
+    def __init__(self, year_model, make, speed=0):
+        self.year_model = year_model
+        self.make = make
+        self.speed=speed
 
-    def input_parametr(self):
+    def accelerate(self):
+        self.speed +=5
 
-        self.country = input("Введите Страну: ")
-        self.fin_data = input("Введите окончание срока действия: ")
-        self.number_1 = int(input("Введите серию и номер: "))
-        self.data_1 = int(input("Введите дату выдачи: "))
+    def break_(self):
+        self.speed -=5
 
-    def print_data1(self):
-        print(self.country)
-        print(self.fin_data)
-        print(self.number_1)
-        print(self.data_1)
+    def get_speed(self):
+        return self.speed
 
-
-object_1 = Foreign()
-object_1.input_data()
-object_1.input_parametr()
-object_1.print_data1()
-object_1.print_data()4
+car=Car("2015", "VW Polo")
+for i in range(5):
+    car.accelerate()
+    print(f"Текущая скорость авто {car.get_speed()}")
+for i in range(5):
+    car.break_()
+    print(f"Текущая скорость авто {car.get_speed()}")

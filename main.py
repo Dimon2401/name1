@@ -278,3 +278,110 @@ import requests
 #     car.break_()
 #     print(f"Текущая скорость авто {car.get_speed()}")
 
+# class Patient():
+#     def __init__(self, name, adr, tel, tel2):
+#         self.name = name
+#         self.adr = adr
+#         self.tel = tel
+#         self.tel2 = tel2
+#
+#
+#     def print_data(self):
+#         print(self.name)
+#         print(self.adr)
+#         print(self.tel)
+#         print(self.tel2)
+#
+#     def get_name(self):
+#       return self.name
+#
+#     def get_adr(self):
+#         return self.adr
+#
+#     def get_tel(self):
+#         return self.tel
+#
+#     def get_tel2(self):
+#         return self.tel2
+#
+#     def edit_name(self, name):
+#         self.name = name
+#
+#     def edit_adr(self, adr):
+#         self.adr = adr
+#
+#     def edit_tel(self, tel):
+#         self.tel = tel
+#
+#     def edit_tel2(self, tel2):
+#         self.tel2 = tel2
+#
+# Patient_1 = Patient(input("Введите Фамилию Имя Отчество: "), input("Введите Адрес с индексом: "),input("Введите телефон: "),input("Введите телефон контактного лица: "))
+# Patient_1.print_data
+# class Procedure:
+#
+#     def __init__(self, code, dat, name_doc, price):
+#         self.code = code
+#         self.dat = dat
+#         self.name_doc = name_doc
+#         self.price = price
+#
+#
+#     def print_data2(self):
+#         print(self.code)
+#         print(self.dat)
+#         print(self.name_doc)
+#         print(self.price)
+#
+#     def get_code(self):
+#         return self.code
+#
+#     def get_dat(self):
+#         return self.dat
+#
+#     def get_name_doc(self):
+#         return self.name_doc
+#
+#     def get_price(self):
+#         return self.price
+#
+#     def edit_code(self, code):
+#         self.code = code
+#
+#     def edit_dat(self, dat):
+#         self.dat = dat
+#
+#     def edit_name_doc(self, name_doc):
+#         self.name_doc = name_doc
+#
+#     def edit_price(self, price):
+#         self.price = price
+#
+#
+# Procedure_1 = Procedure(input("Введите Название процедура: "), input("Введите Дату процедуры: "), input("Введите Имя врача: "), input("Введите Стоимость процедуры: "))
+#
+# Procedure_1.print_data2()
+import math
+class Square:
+    def square_triangle(self, a, h):
+        self.s = 0.5*a*h
+        return self.s
+
+    @staticmethod
+    def square_triangle_2(a,h):
+        return 0.5*a*h
+
+    @staticmethod
+    def square_triangle_3(a,sin_a, sin_b):
+        return math.pow(a,2)*(math.sin(sin_a)*math.sin(sin_b))/2/math.sin(sin_a+sin_b)
+
+
+sy = Square()
+sy.square_triangle(15,20)
+print(sy.s)
+
+print(Square.square_triangle_2(15,5))
+
+print(Square.square_triangle_3(12,30, 60))
+
+
